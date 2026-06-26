@@ -343,19 +343,17 @@ img {
   padding-block: clamp(3rem, 10vw, 5rem);
 }
 
-.page-hero--fide {
+.page-hero--band {
   display: flex;
   align-items: flex-end;
   min-height: var(--media-band-height);
-  padding-block: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.page-hero--fide::after {
+.page-hero--band::after {
   content: "";
   position: absolute;
   inset: 0;
   background-color: color-mix(in srgb, var(--color-hero-tint) 12%, transparent);
-  background-image: url("../assets/imgs/Fide.3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -364,18 +362,24 @@ img {
   z-index: 0;
 }
 
-.page-hero--fide::before {
+.page-hero--band::before {
   z-index: 1;
 }
 
-.page-hero--fide .container {
+.page-hero--band .container {
   z-index: 2;
 }
 
-.page-hero--contact {
-  display: flex;
-  align-items: flex-end;
-  min-height: var(--media-band-height);
+.page-hero--fide {
+  padding-block: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.page-hero--fide::after {
+  background-image: url("../assets/imgs/Fide.3.jpg");
+}
+
+.page-hero--contact::after {
+  background-image: url("../assets/imgs/IMG_5032.JPG");
 }
 
 .page-contact {
@@ -390,31 +394,9 @@ img {
   flex-direction: column;
 }
 
-.page-contact .page-hero--contact {
+.page-contact .page-hero--band {
   flex: 1;
   min-height: auto;
-}
-
-.page-hero--contact::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: color-mix(in srgb, var(--color-hero-tint) 12%, transparent);
-  background-image: url("../assets/imgs/IMG_5032.JPG");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: soft-light;
-  filter: grayscale(100%);
-  z-index: 0;
-}
-
-.page-hero--contact::before {
-  z-index: 1;
-}
-
-.page-hero--contact .container {
-  z-index: 2;
 }
 
 .page-hero .contact-links {
