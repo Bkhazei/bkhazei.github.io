@@ -109,14 +109,48 @@
                     aria-label="Video progress"
                   />
                   <span class="video-gallery__time" data-video-time>0:00 / 0:00</span>
-                  <button
-                    class="video-gallery__mute btn btn--ghost"
-                    type="button"
-                    data-video-mute
-                    aria-pressed="true"
-                  >
-                    Unmute
-                  </button>
+                  <div class="video-gallery__volume">
+                    <button
+                      class="video-gallery__mute is-muted"
+                      type="button"
+                      data-video-mute
+                      aria-label="Unmute"
+                      aria-pressed="true"
+                    >
+                      <svg
+                        class="video-gallery__icon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                        <g class="video-gallery__icon-off">
+                          <line x1="23" y1="9" x2="17" y2="15" />
+                          <line x1="17" y1="9" x2="23" y2="15" />
+                        </g>
+                        <g class="video-gallery__icon-waves">
+                          <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                          <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                        </g>
+                      </svg>
+                    </button>
+                    <input
+                      class="video-gallery__volume-slider"
+                      type="range"
+                      data-video-volume
+                      min="0"
+                      max="100"
+                      value="70"
+                      step="1"
+                      aria-label="Volume"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,9 +295,23 @@
           &copy; <span data-year>2026</span> Bahar Khazei. All rights reserved.
         </p>
         <ul class="social">
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Spotify</a></li>
-          <li><a href="#">YouTube</a></li>
+          <li>
+            <a href="mailto:bahar.khazei@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m2 7 10 7 10-7" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bahar.kzie/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

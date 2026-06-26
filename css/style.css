@@ -623,14 +623,96 @@ img {
 }
 
 .video-gallery__mute {
-  border-color: rgba(247, 245, 240, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: none;
+  background: none;
   color: var(--color-paper);
+  cursor: pointer;
   flex-shrink: 0;
 }
 
 .video-gallery__mute:hover {
+  color: rgba(247, 245, 240, 0.75);
+}
+
+.video-gallery__icon {
+  display: block;
+}
+
+.video-gallery__icon-off,
+.video-gallery__icon-waves {
+  transition: opacity 0.2s ease;
+}
+
+.video-gallery__mute.is-muted .video-gallery__icon-off {
+  opacity: 1;
+}
+
+.video-gallery__mute.is-muted .video-gallery__icon-waves {
+  opacity: 0;
+}
+
+.video-gallery__mute:not(.is-muted) .video-gallery__icon-off {
+  opacity: 0;
+}
+
+.video-gallery__mute:not(.is-muted) .video-gallery__icon-waves {
+  opacity: 1;
+}
+
+.video-gallery__volume {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+
+.video-gallery__volume-slider {
+  width: 88px;
+  height: 4px;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(247, 245, 240, 0.25);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.video-gallery__volume-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: rgba(247, 245, 240, 0.25);
+  border-radius: 2px;
+}
+
+.video-gallery__volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  margin-top: -3px;
+  border-radius: 50%;
   background: var(--color-paper);
-  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.video-gallery__volume-slider::-moz-range-track {
+  height: 4px;
+  background: rgba(247, 245, 240, 0.25);
+  border-radius: 2px;
+}
+
+.video-gallery__volume-slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-paper);
+  cursor: pointer;
 }
 
 .video-gallery__transport {
@@ -921,9 +1003,23 @@ img {
 }
 
 .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
   color: var(--color-ink);
-  font-size: 0.9rem;
-  font-weight: 500;
+}
+
+.social a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.social svg {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 /* --------------------------------------------------------------------------

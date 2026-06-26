@@ -53,9 +53,11 @@
     const progressEl = gallery.querySelector("[data-video-progress]");
     const timeEl = gallery.querySelector("[data-video-time]");
     const muteBtn = gallery.querySelector("[data-video-mute]");
+    const volumeEl = gallery.querySelector("[data-video-volume]");
 
     let player = null;
     let isMuted = true;
+    let volumeLevel = 70;
     let isPlaying = false;
     let isSeeking = false;
     let progressTimer = null;
@@ -103,14 +105,24 @@
 
     function updateMuteButton() {
       if (!muteBtn) return;
-      muteBtn.textContent = isMuted ? "Unmute" : "Mute";
+      muteBtn.classList.toggle("is-muted", isMuted);
       muteBtn.setAttribute("aria-pressed", isMuted ? "true" : "false");
+      muteBtn.setAttribute("aria-label", isMuted ? "Unmute" : "Mute");
+    }
+
+    function applyVolumeState() {
+      if (!player || !player.setVolume) return;
+
+      if (isMuted) {
+        player.mute();
+      } else {
+        player.unMute();
+        player.setVolume(volumeLevel);
+      }
     }
 
     function applyMuteState() {
-      if (!player) return;
-      if (isMuted) player.mute();
-      else player.unMute();
+      applyVolumeState();
     }
 
     function styleIframe() {
@@ -162,6 +174,7 @@
             styleIframe();
             player.mute();
             player.playVideo();
+            if (volumeEl) volumeEl.value = String(volumeLevel);
             updateMuteButton();
             updateProgress();
           },
@@ -233,7 +246,24 @@
     if (muteBtn) {
       muteBtn.addEventListener("click", function () {
         isMuted = !isMuted;
-        applyMuteState();
+        if (!isMuted && volumeLevel === 0) {
+          volumeLevel = 70;
+          if (volumeEl) volumeEl.value = "70";
+        }
+        applyVolumeState();
+        updateMuteButton();
+      });
+    }
+
+    if (volumeEl) {
+      volumeEl.addEventListener("input", function () {
+        volumeLevel = Number(volumeEl.value);
+        if (volumeLevel === 0) {
+          isMuted = true;
+        } else {
+          isMuted = false;
+        }
+        applyVolumeState();
         updateMuteButton();
       });
     }
