@@ -1,125 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bahar Khazei — Musician</title>
-  <meta name="description" content="Bahar Khazei is a musician. Bio, projects, live events and contact." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahar Khazei — Musician</title>
+    <meta
+      name="description"
+      content="Bahar Khazei is a musician. Bio, projects, live events and contact."
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <!-- ===== Header / Nav (same on every page) ===== -->
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="nav__brand">Bahar Khazei</a>
+        <button class="nav__toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html" class="is-active">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="events.html">Shows</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-  <!-- ===== Header / Nav (same on every page) ===== -->
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav__brand">Bahar Khazei</a>
-      <button class="nav__toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links">
-        <li><a href="index.html" class="is-active">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="events.html">Live</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+    <main>
+      <!-- ===== Hero ===== -->
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">
+            electroacoustic music &middot; free improvisation &middot ambient
+            noise
+          </p>
+          <h1>Bahar Khazei</h1>
+          <p class="lead">
+            Bahar Khazei is a sound artist, composer, and performer living in
+            Vancouver whose work spans electroacoustic music, free
+            improvisation, ambient noise and synthesis.
+          </p>
+          <!-- <p class="lead"> Originally from Tehran,
+            her practice is informed by themes of language, migration, and
+            belonging. In her work, she often uses prepared piano, noise,
+            collected sounds, field recordings, speech, and original
+            compositions. Her work captures liminal spaces where the familiar
+            and unfamiliar meet, exploring concepts such as language, othering,
+            loss of home, and belonging. As an active member of Vancouver's
+            experimental music community, she performs regularly in the city's
+            free improv and the underground noise scenes.</p> -->
+          <p style="margin-top: 2rem">
+            <a href="projects.html" class="btn">Listen to her work</a>
+            <a href="events.html" class="btn btn--ghost">Shows</a>
+          </p>
+        </div>
+      </section>
 
-  <main>
-    <!-- ===== Hero ===== -->
-    <section class="hero">
+      <hr class="divider" />
+
+      <!-- ===== About / Bio ===== -->
+      <section class="section" id="about">
+        <div class="container split">
+          <div>
+            <img
+              class="portrait"
+              src="assets/imgs/IMG_4040.jpg"
+              alt="Bahar Khazei performing"
+            />
+          </div>
+          <div>
+            <!-- <p class="eyebrow">About</p> -->
+            <h2>Bahar's Music</h2>
+            <p>
+              Originally from Tehran, her practice is informed by themes of
+              language, migration, and belonging. In her work, she often uses
+              prepared piano, noise, collected sounds, field recordings, speech,
+              and original compositions. Her work captures liminal spaces where
+              the familiar and unfamiliar meet, exploring concepts such as
+              language, othering, loss of home, and belonging. As an active
+              member of Vancouver's experimental music community, she performs
+              regularly in the city's free improv and the underground noise
+              scenes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- <hr class="divider" /> -->
+
+      <!-- ===== Highlights / quick facts ===== -->
+      <!-- <section class="section">
+        <div class="container">
+          <p class="eyebrow">At a glance</p>
+          <div class="grid">
+            <div class="card">
+              <h3>Sound</h3>
+              <p>A line or two describing her genre and instrumentation.</p>
+            </div>
+            <div class="card">
+              <h3>Based in</h3>
+              <p>City, Country — and where she performs.</p>
+            </div>
+            <div class="card">
+              <h3>Latest release</h3>
+              <p>Name of the most recent single, EP, or album.</p>
+            </div>
+            <div class="card">
+              <h3>For press</h3>
+              <p>Short blurb or a link to a press kit / EPK.</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <!-- ===== Footer (same on every page) ===== -->
+    <footer class="site-footer">
       <div class="container">
-        <p class="eyebrow">Musician &middot; Composer &middot; Performer</p>
-        <h1>Music made to be felt.</h1>
-        <p class="lead">
-          Bahar Khazei is a musician whose work moves between [genres / instruments].
-          This is a short, punchy introduction — replace it with one or two sentences
-          that capture who she is and what her sound is about.
+        <p>
+          &copy; <span data-year>2026</span> Bahar Khazei. All rights reserved.
         </p>
-        <p style="margin-top:2rem;">
-          <a href="projects.html" class="btn">Listen to her work</a>
-          <a href="events.html" class="btn btn--ghost">Upcoming shows</a>
-        </p>
+        <ul class="social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Spotify</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
       </div>
-    </section>
+    </footer>
 
-    <hr class="divider" />
-
-    <!-- ===== About / Bio ===== -->
-    <section class="section" id="about">
-      <div class="container split">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>Biography</h2>
-          <p>
-            Write the main bio here. A good first paragraph covers where Bahar is
-            based, her instruments or voice, and the heart of her musical style.
-          </p>
-          <p>
-            Use a second paragraph for her journey — training, formative influences,
-            notable collaborations, or the story behind her current project. Keep the
-            tone in her own voice.
-          </p>
-          <p>
-            A final short paragraph can point to what's next, or a recurring theme in
-            her music. You can edit all of this directly in <code>index.html</code>.
-          </p>
-        </div>
-        <div>
-          <!-- Replace assets/portrait.jpg with a real photo -->
-          <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Bahar Khazei"
-               onerror="this.style.display='none'" />
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider" />
-
-    <!-- ===== Highlights / quick facts ===== -->
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">At a glance</p>
-        <div class="grid">
-          <div class="card">
-            <h3>Sound</h3>
-            <p>A line or two describing her genre and instrumentation.</p>
-          </div>
-          <div class="card">
-            <h3>Based in</h3>
-            <p>City, Country — and where she performs.</p>
-          </div>
-          <div class="card">
-            <h3>Latest release</h3>
-            <p>Name of the most recent single, EP, or album.</p>
-          </div>
-          <div class="card">
-            <h3>For press</h3>
-            <p>Short blurb or a link to a press kit / EPK.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===== Footer (same on every page) ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span data-year>2026</span> Bahar Khazei. All rights reserved.</p>
-      <ul class="social">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Spotify</a></li>
-        <li><a href="#">YouTube</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -1,110 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live — Bahar Khazei</title>
-  <meta name="description" content="Live music events: upcoming and past shows by Bahar Khazei." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shows — Bahar Khazei</title>
+    <meta
+      name="description"
+      content="Live performances and shows by Bahar Khazei."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav__brand">Bahar Khazei</a>
-      <button class="nav__toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links">
-        <li><a href="index.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="events.html" class="is-active">Live</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main>
-    <section class="section">
-      <div class="container">
-        <p class="eyebrow">Live Music</p>
-        <h1>Shows &amp; events</h1>
-        <p class="lead">
-          Where to catch Bahar live. Switch between upcoming and past performances.
-          Each show can link to tickets, an event page, or a recap.
-        </p>
-
-        <!-- Tabs (toggled by js/main.js) -->
-        <div class="tabs" style="margin-top:2rem;">
-          <button class="tab is-active" data-tab="upcoming">Upcoming</button>
-          <button class="tab" data-tab="past">Past</button>
-        </div>
-
-        <!-- ===== Upcoming ===== -->
-        <ul class="events" data-events="upcoming">
-          <li class="event">
-            <span class="event__date">May 12, 2026</span>
-            <div>
-              <div class="event__title">Show Title / Tour Name</div>
-              <div class="event__venue">Venue Name — City, Country</div>
-            </div>
-            <a class="btn btn--ghost event__action" href="#" target="_blank" rel="noopener">Tickets</a>
-          </li>
-          <li class="event">
-            <span class="event__date">Jun 03, 2026</span>
-            <div>
-              <div class="event__title">Festival Appearance</div>
-              <div class="event__venue">Festival Name — City, Country</div>
-            </div>
-            <a class="btn btn--ghost event__action" href="#" target="_blank" rel="noopener">Tickets</a>
-          </li>
-          <!-- Copy a <li class="event"> block above to add another upcoming show -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="index.html" class="nav__brand">Bahar Khazei</a>
+        <button class="nav__toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="events.html" class="is-active">Shows</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-
-        <!-- ===== Past (hidden until selected) ===== -->
-        <ul class="events" data-events="past" hidden>
-          <li class="event event--past">
-            <span class="event__date">Nov 18, 2025</span>
-            <div>
-              <div class="event__title">Album Launch Night</div>
-              <div class="event__venue">Venue Name — City, Country</div>
-            </div>
-            <a class="event__action" href="#" target="_blank" rel="noopener">Recap &rarr;</a>
-          </li>
-          <li class="event event--past">
-            <span class="event__date">Sep 02, 2025</span>
-            <div>
-              <div class="event__title">Summer Sessions</div>
-              <div class="event__venue">Venue Name — City, Country</div>
-            </div>
-            <a class="event__action" href="#" target="_blank" rel="noopener">Photos &rarr;</a>
-          </li>
-        </ul>
-
-        <p style="margin-top:2.5rem; color:var(--color-muted);">
-          No upcoming dates? <a href="contact.html">Get in touch about booking &rarr;</a>
-        </p>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span data-year>2026</span> Bahar Khazei. All rights reserved.</p>
-      <ul class="social">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Spotify</a></li>
-        <li><a href="#">YouTube</a></li>
-      </ul>
-    </div>
-  </footer>
+    <main>
+      <!-- <section class="section">
+        <div class="container">
+          <p class="eyebrow">Shows</p>
+          <h1>Shows</h1>
+          <p class="lead">
+            Selected performances, festivals, and series appearances.
+          </p>
+        </div>
+      </section> -->
 
-  <script src="js/main.js"></script>
-</body>
+      <!-- ===== Featured videos ===== -->
+      <section class="video-section">
+        <div class="video-gallery video-gallery--hero" data-video-gallery>
+          <div class="video-gallery__player">
+            <div class="video-gallery__embed" data-video-embed></div>
+
+            <div class="video-gallery__overlay">
+              <div class="container video-gallery__controls">
+                <h2 class="video-gallery__title">Featured performances</h2>
+                <div
+                  class="video-gallery__tabs"
+                  role="tablist"
+                  aria-label="Select a video"
+                >
+                  <button
+                    class="video-gallery__tab is-active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    data-video-index="0"
+                  >
+                    DarkSide
+                  </button>
+                  <button
+                    class="video-gallery__tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    data-video-index="1"
+                  >
+                    LightSpeed
+                  </button>
+                  <button
+                    class="video-gallery__tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    data-video-index="2"
+                  >
+                    LESS Events Series
+                  </button>
+                </div>
+
+                <div class="video-gallery__transport">
+                  <button
+                    class="video-gallery__play"
+                    type="button"
+                    data-video-play
+                    aria-label="Pause"
+                  >
+                    Pause
+                  </button>
+                  <input
+                    class="video-gallery__progress"
+                    type="range"
+                    data-video-progress
+                    min="0"
+                    max="1000"
+                    value="0"
+                    step="1"
+                    aria-label="Video progress"
+                  />
+                  <span class="video-gallery__time" data-video-time>0:00 / 0:00</span>
+                  <button
+                    class="video-gallery__mute btn btn--ghost"
+                    type="button"
+                    data-video-mute
+                    aria-pressed="true"
+                  >
+                    Unmute
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Shows list ===== -->
+      <section class="page-section page-section--after-media">
+        <div class="container">
+          <h2>Past shows</h2>
+          <ul class="events">
+            <li class="event">
+              <span class="event__date">2026</span>
+              <div>
+                <div class="event__title">
+                  Solo opener — nondual album release
+                </div>
+                <div class="event__venue">Cole Schmidt and Alvaro Rojas</div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2026</span>
+              <div>
+                <div class="event__title">Fide</div>
+                <div class="event__venue">
+                  Solo performance — The Unwritten Weekend Festival, Barking
+                  Sphinx Performance Society
+                </div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2026</span>
+              <div>
+                <div class="event__title">Notice Flower</div>
+                <div class="event__venue">
+                  The awards ceremony — Mena Film Festival
+                </div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2025</span>
+              <div>
+                <div class="event__title">Notice Flower</div>
+                <div class="event__venue">
+                  Lost Dog Sundays — Barking Sphinx Performance Society
+                </div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2025</span>
+              <div>
+                <div class="event__title">Notice Flower</div>
+                <div class="event__venue">
+                  The World to Come — Now Society &amp; 8East
+                </div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2025</span>
+              <div>
+                <div class="event__title">Improvised Series</div>
+                <div class="event__venue">
+                  With Jen Yakamovich and Viviane Houle — Lost Dog Sundays,
+                  Barking Sphinx Performance Society
+                </div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2025</span>
+              <div>
+                <div class="event__title">Improvised ensembles</div>
+                <div class="event__venue">
+                  Now Society &amp; 8East seven years celebration marathon
+                </div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2025</span>
+              <div>
+                <div class="event__title">Tall Brain</div>
+                <div class="event__venue">Tyrant Studios</div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2025</span>
+              <div>
+                <div class="event__title">Tall Brain</div>
+                <div class="event__venue">KW Studios</div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2025</span>
+              <div>
+                <div class="event__title">Fide</div>
+                <div class="event__venue">
+                  Live set — Teflonspine series at the Red Gate
+                </div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2024</span>
+              <div>
+                <div class="event__title">Tall Brain</div>
+                <div class="event__venue">The Cobalt</div>
+              </div>
+            </li>
+
+            <li class="event">
+              <span class="event__date">2024</span>
+              <div>
+                <div class="event__title">Fide</div>
+                <div class="event__venue">
+                  Solo project live set — &ldquo;Something Green&rdquo;
+                  electronic music series at Chapel Sound
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <!-- <p style="margin-top: 2.5rem; color: var(--color-muted)">
+            For booking inquiries,
+            <a href="contact.html">get in touch &rarr;</a>
+          </p> -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          &copy; <span data-year>2026</span> Bahar Khazei. All rights reserved.
+        </p>
+        <ul class="social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Spotify</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

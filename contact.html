@@ -8,12 +8,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
-<body>
+<body class="page-contact">
 
   <header class="site-header">
     <div class="container nav">
@@ -24,64 +24,36 @@
       <ul class="nav__links">
         <li><a href="index.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="events.html">Live</a></li>
+        <li><a href="events.html">Shows</a></li>
         <li><a href="contact.html" class="is-active">Contact</a></li>
       </ul>
     </div>
   </header>
 
   <main>
-    <section class="section">
+    <section class="page-hero page-hero--contact">
       <div class="container">
-        <p class="eyebrow">Contact</p>
-        <h1>Get in touch</h1>
+        <h2>Contact</h2>
         <p class="lead">
           For booking, press, collaborations, or just to say hello.
         </p>
 
-        <div class="contact-grid" style="margin-top:3rem;">
-          <!-- Direct details -->
-          <div>
-            <div class="contact-detail">
-              <span>General &amp; booking</span>
-              <a href="mailto:hello@example.com">hello@example.com</a>
-            </div>
-            <div class="contact-detail">
-              <span>Management</span>
-              <a href="mailto:management@example.com">management@example.com</a>
-            </div>
-            <div class="contact-detail">
-              <span>Follow</span>
-              <ul class="social" style="margin-top:0.4rem;">
-                <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-                <li><a href="#" target="_blank" rel="noopener">Spotify</a></li>
-                <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
-              </ul>
-            </div>
+        <div class="contact-links">
+          <div class="contact-detail">
+            <span>Email</span>
+            <a href="#">Add link</a>
           </div>
-
-          <!-- Contact form.
-               NOTE: GitHub Pages is static and cannot process form submissions on its own.
-               To make this form send email, point the form `action` at a free service like
-               Formspree (https://formspree.io) or Web3Forms, e.g.:
-                 <form action="https://formspree.io/f/yourid" method="POST">
-               Until then, the mailto fallback above works for everyone. -->
-          <div>
-            <form action="#" method="POST">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required />
-              </div>
-              <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn">Send message</button>
-            </form>
+          <div class="contact-detail">
+            <span>Instagram</span>
+            <a href="#">Add link</a>
+          </div>
+          <div class="contact-detail">
+            <span>Spotify</span>
+            <a href="#">Add link</a>
+          </div>
+          <div class="contact-detail">
+            <span>YouTube</span>
+            <a href="#">Add link</a>
           </div>
         </div>
       </div>
