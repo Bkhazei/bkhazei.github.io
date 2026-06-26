@@ -13,8 +13,10 @@
   --color-line: #e2ddd3; /* borders / dividers */
   --color-accent: #9a6b4f; /* links, highlights */
   --color-accent-dark: #774f38;
+  --color-green: #679e4a;
+  --color-green-dark: #527a3b;
   --color-card: #fffdf9; /* cards / raised surfaces */
-  --color-hero-tint: #50524d; /* subtle wash over hero photo */
+  --color-hero-tint: #679e4a; /* subtle wash over hero photo */
 
   /* Typography */
   --font-display: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -83,7 +85,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent-dark);
+  color: var(--color-green);
   text-decoration: underline;
 }
 
@@ -180,8 +182,16 @@ img {
   letter-spacing: -0.01em;
 }
 
+.nav__brand-accent {
+  color: var(--color-green);
+}
+
 .nav__brand:hover {
   text-decoration: none;
+}
+
+.nav__brand:hover .nav__brand-accent {
+  color: var(--color-green-dark);
 }
 
 .nav__links {
@@ -199,7 +209,13 @@ img {
 }
 
 .nav__links a.is-active {
-  color: var(--color-accent);
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.nav__links a:hover {
+  color: var(--color-green);
+  text-decoration: none;
 }
 
 .nav__toggle {
@@ -344,7 +360,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
-  filter: grayscale(100%);
+  filter: saturate(0.55) contrast(1.04) brightness(0.98);
   z-index: 0;
 }
 
@@ -610,7 +626,9 @@ img {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   margin-bottom: -1px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .video-gallery__tab:hover {
@@ -824,8 +842,8 @@ img {
 }
 
 .platforms a:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
+  color: var(--color-green);
+  border-color: var(--color-green);
   text-decoration: none;
 }
 
@@ -1012,7 +1030,7 @@ img {
 }
 
 .social a:hover {
-  color: var(--color-accent);
+  color: var(--color-green);
   text-decoration: none;
 }
 
