@@ -1,4 +1,22 @@
 /* ==========================================================================
+   Font imports — swap active/commented block
+   ========================================================================== */
+
+/* Geist Sans (active) */
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/400.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/500.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/600.css");
+@import url("https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.2.5/700.css");
+
+/* Playfair Display (switch back — uncomment below + update :root fonts)
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+*/
+
+/* Montserrat (switch back — uncomment below + update :root fonts)
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*/
+
+/* ==========================================================================
    Bahar Khazei — site styles
    --------------------------------------------------------------------------
    Everything you'll usually want to tweak (colors, fonts, spacing) lives in
@@ -13,14 +31,24 @@
   --color-line: #e2ddd3; /* borders / dividers */
   --color-accent: #9a6b4f; /* links, highlights */
   --color-accent-dark: #774f38;
-  --color-green: #679e4a;
-  --color-green-dark: #527a3b;
+  --color-link-hover: var(--color-accent-dark); /* body link hover */
+  --color-nav-hover: var(--color-muted); /* nav / footer icon hover */
   --color-card: #fffdf9; /* cards / raised surfaces */
   --color-hero-tint: #679e4a; /* subtle wash over hero photo */
 
-  /* Typography */
+  /* Typography — swap active/commented blocks to change fonts */
+  --font-display: "Geist Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Geist Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Playfair Display (switch back: comment Geist above, uncomment below)
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Playfair Display", Georgia, "Times New Roman", serif;
+  */
+
+  /* Montserrat (switch back: comment Geist above, uncomment below)
   --font-display: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  */
 
   /* Layout */
   --max-width: 1080px;
@@ -85,7 +113,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-green);
+  color: var(--color-link-hover);
   text-decoration: underline;
 }
 
@@ -112,9 +140,9 @@ img {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--color-muted);
-  max-width: 60ch;
+  max-width: 40ch;
 }
 
 /* --------------------------------------------------------------------------
@@ -178,20 +206,22 @@ img {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--color-ink);
   letter-spacing: -0.01em;
 }
 
-.nav__brand-accent {
-  color: var(--color-green);
+.nav__brand,
+.nav__links a {
+  color: var(--color-ink);
 }
 
-.nav__brand:hover {
+.nav__brand:hover,
+.nav__links a:hover {
+  color: var(--color-nav-hover);
   text-decoration: none;
 }
 
-.nav__brand:hover .nav__brand-accent {
-  color: var(--color-green-dark);
+.nav__brand-accent {
+  color: inherit;
 }
 
 .nav__links {
@@ -203,19 +233,12 @@ img {
 }
 
 .nav__links a {
-  color: var(--color-ink);
   font-size: 0.95rem;
   font-weight: 500;
 }
 
 .nav__links a.is-active {
-  color: var(--color-green);
   font-weight: 700;
-}
-
-.nav__links a:hover {
-  color: var(--color-green);
-  text-decoration: none;
 }
 
 .nav__toggle {
@@ -824,8 +847,8 @@ img {
 }
 
 .platforms a:hover {
-  color: var(--color-green);
-  border-color: var(--color-green);
+  color: var(--color-nav-hover);
+  border-color: var(--color-nav-hover);
   text-decoration: none;
 }
 
@@ -845,6 +868,10 @@ img {
   gap: 0.25rem 2rem;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--color-line);
+}
+
+.event:last-child {
+  border-bottom: none;
 }
 
 @media (min-width: 700px) {
@@ -1012,7 +1039,7 @@ img {
 }
 
 .social a:hover {
-  color: var(--color-green);
+  color: var(--color-nav-hover);
   text-decoration: none;
 }
 

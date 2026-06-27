@@ -9,12 +9,11 @@
       content="Music, releases and projects by Bahar Khazei across streaming and other platforms."
     />
 
+    <!-- Fonts load in css/style.css — swap @import + :root blocks there -->
+    <!-- If using Google Fonts (Playfair/Montserrat), uncomment preconnect:
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    -->
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -22,7 +21,9 @@
   <body>
     <header class="site-header">
       <div class="container nav">
-        <a href="index.html" class="nav__brand"><span class="nav__brand-accent">Bahar</span> Khazei</a>
+        <a href="index.html" class="nav__brand"
+          ><span class="nav__brand-accent">Bahar</span> Khazei</a
+        >
         <button class="nav__toggle" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -77,9 +78,7 @@
               <span class="event__date">2026</span>
               <div>
                 <div class="event__title">Notice Flower</div>
-                <div class="event__venue">
-                  Duo EP — to be released September 2026
-                </div>
+                <div class="event__venue">Duo EP — to be released 2026</div>
               </div>
             </li>
 
@@ -92,7 +91,7 @@
             </li>
 
             <li class="event">
-              <span class="event__date">2025–</span>
+              <span class="event__date">2025 – Current</span>
               <div>
                 <div class="event__title">The World to Come Series</div>
                 <div class="event__venue">
@@ -142,18 +141,45 @@
         <ul class="social">
           <li>
             <a href="mailto:bahar.khazei@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <rect x="2" y="4" width="20" height="16" rx="2" />
                 <path d="m2 7 10 7 10-7" />
               </svg>
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/bahar.kzie/" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <a
+              href="https://www.instagram.com/bahar.kzie/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  fill="currentColor"
+                  stroke="none"
+                />
               </svg>
             </a>
           </li>
